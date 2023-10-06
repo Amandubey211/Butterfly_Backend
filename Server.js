@@ -31,7 +31,7 @@ App.use(cors());
 //   })
 
 // }
-App.get('/', (req, res) => { res.send("api is running") })
+App.get('/', (req, res) => { res.send("SERVER is running") })
 
 //------------------------------------------------------------------
 
