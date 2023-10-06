@@ -50,10 +50,14 @@ const server = App.listen(port, () => {
   console.log(`server success`);
 });
 
+
+
 const io = require("socket.io")(server, {
   pingTimeout: 70000,
   cors: {
-    origin: "https://butterfly-w0aw.onrender.com/"
+
+    origin: "*",
+    //methods: ["GET", "POST"]
     // frontend hosted link here
   },
 });
