@@ -53,7 +53,7 @@ const server = App.listen(port, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: process.env.CLIENT_LINK || "https://butterflyback.onrender.com " // frontend hosted link here
+    origin: process.env.CLIENT_LINK || "https://butterfly-w0aw.onrender.com/ " // frontend hosted link here
   },
 });
 
