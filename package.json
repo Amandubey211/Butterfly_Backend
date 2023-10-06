@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Chat App server",
-  "main": "server.js",
+  "main": "Server.js",
 
   
   "scripts": {
