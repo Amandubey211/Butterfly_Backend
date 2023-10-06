@@ -47,7 +47,7 @@ DBconnect();
 
 const port = process.env.PORT;
 const server = App.listen(port, () => {
-  console.log(`server success ${port}`);
+  console.log(`server success`);
 });
 
 const io = require("socket.io")(server, {
