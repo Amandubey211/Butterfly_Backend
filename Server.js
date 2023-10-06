@@ -51,26 +51,26 @@ const server = App.listen(port, () => {
 });
 
 const io = require("socket.io")(server, {
-  pingTimeout: 60000,
+  pingTimeout: 70000,
   cors: {
-    origin: process.env.CLIENT_LINK 
+    origin: "https://butterfly-w0aw.onrender.com/"
     // frontend hosted link here
   },
 });
 
 io.on("connection", (socket) => {
-  console.log("connected to socket io");
+  console.log("connected to socket io"); //
 
   socket.on("setup", (userData) => {
     socket.join(userData.Id);
 
-    console.log(userData.Id);
+    console.log(userData.Id); //
     socket.emit("connected");
   });
 
   socket.on("join chat", (room) => {
     socket.join(room);
-    console.log("user joined room", room);
+    console.log("user joined room", room); //
   });
   socket.on("typing", (room) => socket.in(room).emit("typing"));
   socket.on("stop typing", (room) => socket.in(room).emit("stop typing"));
